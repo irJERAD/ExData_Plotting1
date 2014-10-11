@@ -1,6 +1,6 @@
 ## Introduction
 
-**Initial test of fork and now push**
+**Trial complete delete this message when done**
 
 This assignment uses data from
 the <a href="http://archive.ics.uci.edu/ml/">UC Irvine Machine
