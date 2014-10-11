@@ -13,7 +13,7 @@
         download.file(fileUrl, temp)
 
         # unzip file, read table and save results as variable raw
-        raw <- read.table(unz(temp, "household_power_consumption.txt"), header = TRUE, sep=";", colClasses = "character")
+        raw <- read.table(unz(temp, "household_power_consumption.txt"), header = TRUE, sep=";", colClasses = "character", na.strings = "?")
         
         # The temp folder containing the zip is now released
         unlink(temp)
@@ -25,6 +25,3 @@
         with(powerdata, hist(as.numeric(Global_active_power), xlab = "Global Active Power (kilowatts)", main = "Global Active Power", col = "red"))
         dev.copy(png, file = "plot1.png", width = 480, height = 480)
         dev.off()
-        ## TODO
-        ## rewatch video on how to export to PNG file (as well as correct size)
-        ## push png file to github repo
